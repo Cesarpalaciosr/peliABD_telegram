@@ -2,7 +2,7 @@ const telebot = require("telebot");
 const CONTANTS = require("./constants");
 const express = require('express')
 const app = express();
-const port = 3000
+//const port = 3000
 const bot = new telebot({
     token: CONTANTS.TELEGRAM_TOKEN
     })
@@ -12,9 +12,7 @@ const bot = new telebot({
       res.send('Hello World!')
     })
     
-    app.listen(port, () => {
-      console.log(`Example app listening on port ${port}`)
-    })
+    .listen(process.env.PORT || 5000)
 
 
 
