@@ -1,10 +1,22 @@
 const telebot = require("telebot");
 const CONTANTS = require("./constants");
 const express = require('express')
-const expressApp = express();
+const app = express();
+const port = 3000
 const bot = new telebot({
     token: CONTANTS.TELEGRAM_TOKEN
     })
+
+
+    app.get('/', (req, res) => {
+      res.send('Hello World!')
+    })
+    
+    app.listen(port, () => {
+      console.log(`Example app listening on port ${port}`)
+    })
+
+
 
 bot.on(["/start","/hola"], (msg) => {
     bot.sendMessage(msg.chat.id, `Hola ${msg.chat.username}, soy bot hecho por cesar`)
