@@ -1,0 +1,23 @@
+{
+  "name": "bot_tlg_peliabd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cesarpalaciosr/bot_telegram_PeliABD.git"
+  },
+  "author": "Cesar P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cesarpalaciosr/bot_telegram_PeliABD/issues"
+  },
+  "homepage": "https://github.com/Cesarpalaciosr/bot_telegram_PeliABD#readme",
+  "dependencies": {
+    "telebot": "^1.4.1"
+  }
+}
