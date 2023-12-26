@@ -1,22 +1,10 @@
-const telebot = require("telebot");
-const CONTANTS = require("./constants");
 const express = require('express')
 const app = express();
-//const port = 3000
-console.log("soy el token");
-console.log(CONTANTS.TELEGRAM_TOKEN);
+const telebot = require("telebot");
+const CONTANTS = require("./src/constants/constants");
 const bot = new telebot({
     token: CONTANTS.TELEGRAM_TOKEN
     })
-
-
-    app.get('/', (req, res) => {
-      res.send('Hello World!')
-    })
-    
-    .listen(process.env.PORT || 5000)
-
-
 
 bot.on(["/start","/hola"], (msg) => {
     bot.sendMessage(msg.chat.id, `Hola ${msg.chat.username}, soy bot hecho por cesar`)
@@ -73,3 +61,11 @@ bot.on(["/isabela", "/isabella","/lesbica", "/lesbianicon"], (msg) => {
 
 
 bot.start();
+
+
+    app.get('/', (req, res) => {
+      res.send('Hello World!')
+    })
+    
+    app.listen(process.env.PORT || 5000)
+
