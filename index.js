@@ -3,6 +3,8 @@ const CONTANTS = require("./constants");
 const express = require('express')
 const app = express();
 //const port = 3000
+console.log("soy el token");
+console.log(CONTANTS.TELEGRAM_TOKEN);
 const bot = new telebot({
     token: CONTANTS.TELEGRAM_TOKEN
     })
